@@ -701,9 +701,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 679630985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be0985429b556a44bbf8a26ff10b767e, type: 3}
+  m_Script: {fileID: 11500000, guid: d9087405e713bce4295af3b286105996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamestart: 0
+  player: {fileID: 1215079761}
 --- !u!4 &679630987
 Transform:
   m_ObjectHideFlags: 0
@@ -1400,6 +1402,7 @@ MonoBehaviour:
   jumpforce: 5
   sc: {fileID: 1671863162}
   gameOverCanvas: {fileID: 857017941}
+  manager: {fileID: 679630986}
 --- !u!212 &1215079762
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1701,7 +1704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679630986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -2126,7 +2129,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679630986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 1
