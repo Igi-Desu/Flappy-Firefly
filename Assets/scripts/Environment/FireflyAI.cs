@@ -3,13 +3,12 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class FireflyAI : MonoBehaviour
 {
-    //AI swietlika
     float speed = 2;
     float amplitude = 2;
     float period = 1;
     void Start()
     {
-        //losuje jego parametry zeby by³a wiêksza ró¿norodnoœæ
+        //Random parameteres to have more diversity
         speed = Random.Range(3, 5);
         amplitude = Random.Range(1,3);
         transform.position = new Vector3(12, Random.Range(-5, 5));
@@ -34,16 +33,12 @@ public class FireflyAI : MonoBehaviour
         }
        
     }
-
-
-    // Update is called once per frame
     void Update()
     {
-        //przesuwam swietlika o jakis x
+        //move firefly by some x
         transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
-        //nastepnie jego y ustalam przez funkcje sinusa tak aby lata³ podobnie do wykresu tej funkcji 
-        //daje to ciekawy faluj¹cy efekt
-        //wszystkie parametry takie amplituda czy okres sa losowo wybierane na samym pocz¹tku
+        //then calculate y position based on that x 
+        //using sin function with eariler generated parameters
         transform.position = new Vector3(transform.position.x,amplitude*Mathf.Sin( transform.position.x*period), transform.position.z);
         if (transform.position.x < -11)
         {

@@ -1,25 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlidingBackground : MonoBehaviour
 {
-    //skrypt do przesuwaj¹cych siê te³
     private float size;
+    //use speed to make parallax effect
     [SerializeField]private float speed=2;
+
     private void Start()
     {
-        //Ka¿de przesuwaj¹ce siê t³o powinno mieæ drugie takie same jakoœ dziecko 
-        //jesli przesuniemy za te pole
-        //           V
-        //[ t³o1   ][  t³o2  ]
-        //to cofamy spowrotem wtedy otrzymujemy wra¿enie ¿e jest nieskoñczone t³o
+        //Background in my project is just two backgrounds joined while one is child
+        //size of that background will be position of child on x  
         size = transform.GetChild(0).transform.localPosition.x;
     }
-
-    // Update is called once per frame
     void Update()
     {
+        //if main background gets behind that size just reset position to make infinite background effect
         transform.position += new Vector3(-speed * Time.deltaTime, 0,0);
         if (transform.position.x <= -size)
         {

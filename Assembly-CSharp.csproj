@@ -57,15 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\Environment\FireFlySpawner.cs" />
-    <Compile Include="Assets\scripts\Player\Movement.cs" />
-    <Compile Include="Assets\scripts\Obstacles\Forest\Obstacle_Spawner.cs" />
+    <Compile Include="Assets\scripts\Player\Player.cs" />
+    <Compile Include="Assets\scripts\Obstacles\Forest\ObstacleSpawner.cs" />
     <Compile Include="Assets\effects\Stars\stars.cs" />
     <Compile Include="Assets\scripts\Environment\SlidingBackground.cs" />
-    <Compile Include="Assets\scripts\Obstacles\Forest\Wood_Spike.cs" />
-    <Compile Include="Assets\scripts\Player\Score_Counter.cs" />
+    <Compile Include="Assets\scripts\Obstacles\Forest\WoodSpike.cs" />
+    <Compile Include="Assets\scripts\Player\ScoreCounter.cs" />
     <Compile Include="Assets\scripts\Obstacles\Forest\FakeSpike.cs" />
     <Compile Include="Assets\scripts\Environment\FireflyAI.cs" />
-    <Compile Include="Assets\scripts\Obstacles\scoreinc.cs" />
     <Compile Include="Assets\scripts\Other\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>

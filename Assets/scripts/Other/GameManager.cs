@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Playables;
 public class GameManager : MonoBehaviour
 {
     public bool gamestart = false;
-    [SerializeField] Movement player;
+    [SerializeField] Player player;
 
     private void Start()
     {
@@ -16,9 +12,9 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        //start game when we are jumping
         if (Input.GetButton("Jump")&&!gamestart)
         {
-            Debug.Log("ABC");
             player.setrb(true);
             gamestart = true;
             Time.timeScale = 1;
@@ -31,9 +27,5 @@ public class GameManager : MonoBehaviour
     public static void QuitGame()
     {
         Application.Quit();
-    }
-    public static void deathanim(GameObject player)
-    {
-      //  p.Play();
     }
 }

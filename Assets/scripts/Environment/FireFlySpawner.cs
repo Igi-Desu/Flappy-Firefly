@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FireFlySpawner : MonoBehaviour
 {
-    //prosty timer i objekt swietlika 
-    //timer spadnie do zera to tworze swietlika i od nowa timer
+    //simple script just spawn firefly when timer gets to 0
     [SerializeField]float timerbase;
     float timer;
     [SerializeField]GameObject firefly;
@@ -13,7 +10,6 @@ public class FireFlySpawner : MonoBehaviour
     {
         timer = timerbase;
     }
-    // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
